@@ -14,7 +14,10 @@ gamerbit.onEvent(GamerBitPin.P2, GamerBitEvent.Down, function () {
     radio.sendString("right")
 })
 gamerbit.onEvent(GamerBitPin.P0, GamerBitEvent.Down, function () {
-    radio.sendString("forward")
+    radio.raiseEvent(
+    EventBusSource.MICROBIT_ID_IO_P0,
+    EventBusValue.MICROBIT_BUTTON_EVT_DOWN
+    )
 })
 basic.forever(function () {
     radio.setGroup(1)
