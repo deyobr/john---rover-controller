@@ -1,3 +1,6 @@
+gamerbit.onEvent(GamerBitPin.P12, GamerBitEvent.Down, function () {
+    radio.sendString("stop")
+})
 gamerbit.onEvent(GamerBitPin.P16, GamerBitEvent.Down, function () {
     radio.sendString("spin")
 })
